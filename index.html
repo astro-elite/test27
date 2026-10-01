@@ -519,7 +519,7 @@
                 <button class="icon-btn" onclick="openApiModal()" title="API Sozlamalari">
                     <i data-lucide="key"></i>
                 </button>
-                <span style="font-size: 0.75rem; color: var(--text-muted);">Gemini 2.5 Flash</span>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">Gemini 3.8 Flash</span>
                 <button class="icon-btn" onclick="clearTodayHistory()" title="Kunlik xotirani tozalash">
                     <i data-lucide="trash-2"></i>
                 </button>
@@ -763,7 +763,8 @@ QAT'IY QOIDALAR:
             try {
                 const dailyContext = getDailyMemoryContext();
                 
-                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`, {
+                // Yangi va faol model: gemini-3.8-flash
+                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key=${apiKey}`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
